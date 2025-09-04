@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ranjitha | Portfolio</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom Styles */
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #fdf6f0;
+      }
+      /* Navbar overrides */
+      .navbar {
+        background-color: #222 !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+      }
+      .navbar-brand {
+        font-weight: 700;
+        font-size: 1.8rem;
+      }
+      .nav-link {
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+      .nav-link:hover,
+      .nav-link:focus {
+        color: #ff6f61 !important;
+      }
+
+      /* Hero */
+      .hero {
+        background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%);
+        height: 60vh;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+        flex-direction: column;
+        padding: 2rem;
+        border-radius: 0 0 50px 50px;
+        animation: fadeIn 1.5s ease forwards;
+      }
+      .hero h1 {
+        font-weight: 800;
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+      .hero p {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+      .hero .btn-primary {
+        background-color: #ff6f61;
+        border: none;
+        font-weight: 600;
+        padding: 0.75rem 2rem;
+        box-shadow: 0 6px 12px rgba(255, 111, 97, 0.5);
+      }
+      .hero .btn-primary:hover {
+        background-color: #e65b50;
+        box-shadow: 0 8px 14px rgba(230, 91, 80, 0.7);
+      }
+
+      /* Section headers */
+      section h2 {
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #353535;
+        text-align: center;
+        position: relative;
+      }
+      section h2::after {
+        content: "";
+        width: 60px;
+        height: 4px;
+        background-color: #ff6f61;
+        display: block;
+        margin: 0.5rem auto 0 auto;
+        border-radius: 2px;
+      }
+
+      /* Skills cards */
+      #skills .card {
+        border-radius: 25px;
+        padding: 1.75rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #ff6f61;
+        background-color: #fff5f3;
+        box-shadow: 0 4px 14px rgba(255, 111, 97, 0.3);
+        transition: transform 0.3s ease;
+      }
+      #skills .card:hover {
+        transform: translateY(-8px) scale(1.05);
+        box-shadow: 0 8px 20px rgba(255, 111, 97, 0.5);
+      }
+
+      /* Projects cards */
+      #projects .card {
+        border-radius: 20px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+      }
+      #projects .card:hover {
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        transform: translateY(-6px);
+      }
+      #projects .card-title {
+        color: #ff6f61;
+        font-weight: 700;
+      }
+
+      /* Contact Section */
+      #contact {
+        background-color: #222;
+        color: white;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        text-align: center;
+      }
+      #contact a {
+        color: #ffb89d;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+      #contact a:hover,
+      #contact a:focus {
+        color: #ff6f61;
+        text-decoration: none;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #ff6f61;
+        color: white;
+        padding: 1rem 0;
+        font-weight: 600;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      /* Responsive font sizes */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
+        section h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Ranjitha K</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero d-flex align-items-center text-center">
+      <div class="container">
+        <h1 class="display-4">Hello, I'm Ranjitha 👋</h1>
+        <p class="lead">Java Developer | Web Developer | Cloud Enthusiast</p>
+        <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2>About Me</h2>
+        <p class="text-center mt-3">
+          I’m Ranjitha K, a Java Developer & Web Developer with experience in
+          building scalable, responsive, and user-friendly applications. Skilled
+          in Java, Spring Boot, Microservices, MySQL, AWS, and Stripe Payment
+          Integration.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-5 bg-light">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="row text-center mt-4">
+          <div class="col-md-3 mb-3">
+            <div class="card p-3">Java & Spring Boot</div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card p-3">Microservices & REST APIs</div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card p-3">MySQL & AWS</div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card p-3">HTML, CSS, JS, React</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-5">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="row mt-4">
+          <div class="col-md-6 mb-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <h5 class="card-title">Stripe Payment Integration</h5>
+                <p class="card-text">
+                  Implemented secure payment gateway using Java, Spring Boot,
+                  and MySQL with AWS deployment.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card shadow">
+              <div class="card-body">
+                <h5 class="card-title">Operation Management System (OMS)</h5>
+                <p class="card-text">
+                  Developed cloud-based enterprise management system using Java
+                  Spring Framework and JSP frontend.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 bg-dark text-light">
+      <div class="container text-center">
+        <h2 class="mb-4">Contact Me</h2>
+        <p>
+          Email:
+          <a href="mailto:ranjithayadav846@gmail.com" class="text-warning"
+            >ranjithayadav846@gmail.com</a
+          >
+        </p>
+        <p>
+          LinkedIn:
+          <a href="#" class="text-warning">linkedin.com/in/ranjithak29</a>
+        </p>
+        <p>
+          GitHub:
+          <a href="#" class="text-warning">github.com/ranjitha</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-secondary text-light">
+      <p>© 2025 Ranjitha K | Portfolio</p>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
